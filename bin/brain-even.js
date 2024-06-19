@@ -17,7 +17,8 @@ const getAnswer = readlineSync.question("Your answer: ");
 const taskAndAnswer = () => {
   console.log("Question: ", getRandomNumber);
   if (
-    (isNumberEven === 0 && getAnswer !== "yes" || isNumberEven !== 0 && getAnswer === "no")
+    (isNumberEven === 0 && getAnswer !== "yes") ||
+    (isNumberEven !== 0 && getAnswer === "no")
   ) {
     console.log(
       `'${getAnswer}' is wrong answer ;(. Correct answer was 'no'. \nLet's try again, ${askName}`
@@ -25,7 +26,10 @@ const taskAndAnswer = () => {
   }
   for (let i = 0; i < 3; i++) {
     console.log("Question: ", getRandomNumber);
-    if (isNumberEven === 0 && getAnswer === "yes" || isNumberEven !== 0 && getAnswer === "no") {
+    if (
+      (isNumberEven === 0 && getAnswer === "yes") ||
+      (isNumberEven !== 0 && getAnswer === "no")
+    ) {
       console.log("Correct!");
     }
     console.log(`Congratulations, ${askName}!`);
