@@ -20,7 +20,7 @@ const taskAndAnswer = () => {
     (isNumberEven === 0 && getAnswer !== "yes" || isNumberEven !== 0 && getAnswer === "no")
   ) {
     console.log(
-      `'${getAnswer}' is wrong answer ;(. Correct answer was 'no'. \n Let's try again, ${askName}`
+      `'${getAnswer}' is wrong answer ;(. Correct answer was 'no'. \nLet's try again, ${askName}`
     );
   }
   for (let i = 0; i < 3; i++) {
