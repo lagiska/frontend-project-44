@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import readlineSync from "readline-sync";
 
 console.log("Welcome to the Brain Games!");
@@ -15,7 +16,8 @@ const isNumberEven = getRandomNumber % 2 === 0;
 const getAnswer = readlineSync.question("Your answer: ");
 
 const taskAndAnswer = () => {
-  console.log("Question: ", getRandomNumber);
+  console.log("Question: " + getRandomNumber);
+  console.log(111);
   if (
     (isNumberEven === 0 && getAnswer !== "yes") ||
     (isNumberEven !== 0 && getAnswer === "no")
