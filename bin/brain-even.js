@@ -4,6 +4,7 @@ console.log("Welcome to the Brain Games!");
 const greetUser = () => {
   const askName = readlineSync.question("May I have your name? ");
   console.log(`Hello, ${askName}!`);
+  return askName;
 };
 greetUser();
 
