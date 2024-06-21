@@ -3,39 +3,38 @@ import readlineSync from "readline-sync";
 
 console.log("Welcome to the Brain Games!");
 const greetUser = () => {
-  const askName = readlineSync.question("May I have your name? ");
+  let askName = readlineSync.question("May I have your name? ");
   console.log(`Hello, ${askName}!`);
   return askName;
 };
 greetUser();
 
-const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-console.log(task);
+let userName = askName;
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const getRandomNumber = Math.floor(Math.random() * 100);
-const isNumberEven = getRandomNumber % 2 === 0;
-const getAnswer = readlineSync.question("Your answer: ");
+const isNumberEven = () => {
+  getRandomNumber % 2 === 0;
+};
+const roundsPlayed = 3;
+let correctAnswersCount = 0;
 
+const correctAnswer = isNumberEven(getRandomNumber) ? "yes" : "no";
 const taskAndAnswer = () => {
-  console.log("Question: " + getRandomNumber);
-  console.log(111);
-  if (
-    (isNumberEven === 0 && getAnswer !== "yes") ||
-    (isNumberEven !== 0 && getAnswer === "no")
-  ) {
-    console.log(
-      `'${getAnswer}' is wrong answer ;(. Correct answer was 'no'. \nLet's try again, ${askName}`
-    );
-  }
-  for (let i = 0; i < 3; i++) {
-    console.log("Question: ", getRandomNumber);
-    if (
-      (isNumberEven === 0 && getAnswer === "yes") ||
-      (isNumberEven !== 0 && getAnswer === "no")
-    ) {
+  while (correctAnswersCount < roundsPlayed) {
+    console.log("Question: " + getRandomNumber);
+    const getAnswer = readlineSync.question("Your answer: ");
+    if (getAnswer === correctAnswer) {
       console.log("Correct!");
+      correctAnswersCount += 1;
+    } else {
+      console.log(
+        `"${getAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`
+      );
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
-    console.log(`Congratulations, ${askName}!`);
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 taskAndAnswer();
