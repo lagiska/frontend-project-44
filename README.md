@@ -5,4 +5,4 @@
 
 Brain-even:
 
-<script src="https://asciinema.org/a/NWYM7AEqS1xJKD0Ffl9Nt5Uxj.js" id="asciicast-NWYM7AEqS1xJKD0Ffl9Nt5Uxj" async="true"></script>
+https://asciinema.org/a/NWYM7AEqS1xJKD0Ffl9Nt5Uxj
