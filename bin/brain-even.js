@@ -12,22 +12,19 @@ greetUser();
 
 let userName = askName;
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-const getRandomNumber = Math.floor(Math.random() * 100);
-const isNumberEven = (number = 10) => {
-  number % 2 === 0;
-  return;
-};
+
 const roundsPlayed = 3;
 let correctAnswersCount = 0;
 
-let correctAnswer;
-if (isNumberEven(getRandomNumber) === true) {
-  correctAnswer = "yes";
-} else {
-  correctAnswer = "no";
-}
 const taskAndAnswer = () => {
   while (correctAnswersCount < roundsPlayed) {
+    const getRandomNumber = Math.ceil(Math.random() * 100);
+    let correctAnswer;
+    if (getRandomNumber % 2 === 0) {
+      correctAnswer = "yes";
+    } else {
+      correctAnswer = "no";
+    }
     console.log("Question: " + getRandomNumber);
     const getAnswer = readlineSync.question("Your answer: ");
     if (getAnswer === correctAnswer) {
