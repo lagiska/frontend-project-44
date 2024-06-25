@@ -9,3 +9,8 @@ const greetUser = () => {
   return askName;
 };
 greetUser();
+
+let userName = askName;
+const rule = 'What is the result of the expression?';
+console.log(rule);
+const operands = [+, -, *];
