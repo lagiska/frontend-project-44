@@ -7,6 +7,7 @@ export const playGame = (rule, taskAndAnswer) => {
 
   console.log(rule);
   let correctAnswersCount = 0;
+  const roundsCount = 3;
   while (correctAnswersCount < roundsCount) {
     
   }
