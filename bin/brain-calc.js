@@ -30,13 +30,13 @@ const taskAndAnswer = () => {
     let correctAnswer;
     switch (operand) {
       case "+":
-        correctAnswer = firstNumber + secondNumber;
+        correctAnswer = (firstNumber + secondNumber).toString();
         break;
       case "-":
-        correctAnswer = firstNumber - secondNumber;
+        correctAnswer = (firstNumber - secondNumber).toString();
         break;
       case "*":
-        correctAnswer = firstNumber * secondNumber;
+        correctAnswer = (firstNumber * secondNumber).toString();
         break;
       default:
         break;
