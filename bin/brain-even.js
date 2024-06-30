@@ -20,14 +20,14 @@ let correctAnswersCount = 0;
 
 const taskAndAnswer = () => {
   while (correctAnswersCount < roundsPlayed) {
-    const randomNumber = getRandomNumber();
+    const question = getRandomNumber();
     let correctAnswer;
     if (randomNumber % 2 === 0) {
       correctAnswer = "yes";
     } else {
       correctAnswer = "no";
     }
-    console.log("Question: " + randomNumber);
+    console.log("Question: " + question);
     const getAnswer = readlineSync.question("Your answer: ");
     if (getAnswer === correctAnswer) {
       console.log("Correct!");
