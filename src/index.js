@@ -1,6 +1,6 @@
 import readlineSync from "readline-sync";
 
-const playGame = (rule, correctAnswer, task) => {
+const playGame = (rule, taskAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -9,6 +9,7 @@ const playGame = (rule, correctAnswer, task) => {
   let correctAnswersCount = 0;
   const roundsCount = 3;
   while (correctAnswersCount < roundsCount) {
+    const [task, correctAnswer] = taskAndAnswer();
     console.log(`Question: ${task}`);
     const getAnswer = readlineSync.question('Your answer: ');
     if (getAnswer === correctAnswer) {

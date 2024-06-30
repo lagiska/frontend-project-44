@@ -1,20 +1,23 @@
 #!/usr/bin/env node
-import playGame from "../src/index.js";
-import readlineSync from "readline-sync";
-import getRandomNumber from "../src/getRandomNumber.js";
+import playGame from "../index.js";
+import getRandomNumber from "../getRandomNumber.js";
 
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-const task = getRandomNumber();
+
+const taskAndAnswer = () => {
+const task = parseInt(getRandomNumber());
 let correctAnswer;
 if (task % 2 === 0) {
-  correctAnswer = "yes";
+    correctAnswer = "yes";
 } else {
-  correctAnswer = "no";
+    correctAnswer = "no";
 }
+  return [task, correctAnswer];
+};
 
 const gameEven = () => {
-  playGame(rule, correctAnswer, task)
+  playGame(rule, taskAndAnswer)
 };
 
 export default gameEven;
