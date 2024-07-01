@@ -8,9 +8,9 @@ const taskAndAnswer = () => {
   const task = parseInt(getRandomNumber());
   const isPrime = (task) => {
     if (task <= 1) return false;
-    if (task % 2 == 0 && num > 2) return false;
-    const s = Math.sqrt(task);
-    for (let i = 3; i <= s; i += 2) {
+    if (task % 2 === 0 && task > 2) return false;
+    const sqRoot = Math.sqrt(task);
+    for (let i = 3; i <= sqRoot; i += 2) {
       if (task % i === 0) return false;
     }
     return true;
