@@ -1,3 +1,3 @@
-const getRandomNumber = (minNumber = 1, maxNumber = 100) => [Math.ceil(Math.random() * maxNumber) + minNumber];
+const getRandomNumber = (minNum = 1, maxNum = 100) => [Math.ceil(Math.random() * maxNum) + minNum];
 
 export default getRandomNumber;
