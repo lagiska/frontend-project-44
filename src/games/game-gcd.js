@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import playGame from "../index.js";
-import getRandomNumber from "../getRandomNumber.js";
+import playGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
-const rule = 'Find the greatest common divisor of given numbers.'
+const rule = 'Find the greatest common divisor of given numbers.';
 
 const getGCD = (num1, num2) => {
   const minNum = num1 > num2 ? num2 : num1;

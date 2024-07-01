@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import playGame from "../index.js";
-import getRandomNumber from "../getRandomNumber.js";
+import playGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
-const rule = "What is the result of the expression?";
+const rule = 'What is the result of the expression?';
 const operands = ['+', '-', '*'];
 
 const taskAndAnswer = () => {
@@ -12,13 +12,13 @@ const taskAndAnswer = () => {
   const task = `${firstNumber} ${operand} ${secondNumber}`;
   let correctAnswer;
   switch (operand) {
-    case "+":
+    case '+':
       correctAnswer = (firstNumber + secondNumber).toString();
       break;
-    case "-":
+    case '-':
       correctAnswer = (firstNumber - secondNumber).toString();
       break;
-    case "*":
+    case '*':
       correctAnswer = (firstNumber * secondNumber).toString();
       break;
     default:
