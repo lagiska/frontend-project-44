@@ -6,8 +6,8 @@ const rule = 'What is the result of the expression?';
 const operands = ['+', '-', '*'];
 
 const taskAndAnswer = () => {
-  const firstNumber = parseInt(getRandomNumber());
-  const secondNumber = parseInt(getRandomNumber());
+  const firstNumber = getRandomNumber(1);
+  const secondNumber = getRandomNumber(1);
   const operand = operands[Math.floor(Math.random() * operands.length)];
   const task = `${firstNumber} ${operand} ${secondNumber}`;
   let correctAnswer;
