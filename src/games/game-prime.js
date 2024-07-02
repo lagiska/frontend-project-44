@@ -6,13 +6,12 @@ const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const taskAndAnswer = () => {
   const task = parseInt(getRandomNumber());
-
   const isPrime = (task) => {
-    if (task <= 1) return false;
-    if (task <= 3) return true;
-    if (task % 2 === 0 || task % 3 === 0) return false;
-    for (let i = 5; i * i <= task; i = i + 6) {
-      if (task % i === 0 || task % (i + 2) === 0) {
+    if (task < 2) {
+      return false;
+    }
+    for (let i = 2; i <= Math.sqrt(task); i += 1) {
+      if (task % i === 0) {
         return false;
       }
     }
