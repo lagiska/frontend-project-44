@@ -18,12 +18,7 @@ const taskAndAnswer = () => {
     return true;
   };
 
-  let correctAnswer;
-  if (isPrime === true) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  const correctAnswer = isPrime(task) ? 'yes' : 'no';
   return [task, correctAnswer];
 };
 
