@@ -16,8 +16,7 @@ const playGame = (rule, taskAndAnswer) => {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
-      console.log(
-        `'${getAnswer}' is wrong answer ;(. Correct answer was "${correctAnswer}".`,
+      console.log(`'${getAnswer}' is wrong answer ;(. Correct answer was "${correctAnswer}".`,
       );
       console.log(`Let's try again, ${userName}!`);
       return;
