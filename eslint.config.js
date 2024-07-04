@@ -12,11 +12,11 @@ const compat = new FlatCompat(
   {
     baseDirectory: __dirname,
     recommendedConfig: pluginJs.configs.recommended,
-  }
+  },
 );
 
 export default [
-   { files: ['**/*.js'], languageOptions: {sourceType: 'script' } },
+  { files: ['**/*.js'], languageOptions: {sourceType: 'script' } } ,
   { languageOptions: { globals: globals.node } },
   ...compat.extends('airbnb'),
 ];
