@@ -16,7 +16,7 @@ const compat = new FlatCompat(
 );
 
 export default [
-  { files: ['**/*.js'], languageOptions: {sourceType: 'script' } } ,
+  { files: ['**/*.js'], languageOptions: { sourceType: 'script' } },
   { languageOptions: { globals: globals.node } },
   ...compat.extends('airbnb'),
 ];
