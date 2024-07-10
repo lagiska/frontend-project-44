@@ -3,23 +3,24 @@ import playGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
 const rule = 'What is the result of the expression?';
-const operands = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 
-const taskAndAnswer = () => {
-  const firstNumber = getRandomNumber(1);
-  const secondNumber = getRandomNumber(1);
-  const operand = operands[Math.floor(Math.random() * operands.length)];
-  const task = `${firstNumber} ${operand} ${secondNumber}`;
+const createRound = () => {
+  const number1 = getRandomNumber(1, 100);
+  const number2 = getRandomNumber(1, 100);
+  const operator = operators[Math.floor(Math.random() * operators.length)];
+  const task = `${number1} ${operator} ${number2}`;
+
   let correctAnswer;
-  switch (operand) {
+  switch (operator) {
     case '+':
-      correctAnswer = (firstNumber + secondNumber).toString();
+      correctAnswer = (number1 + number2).toString();
       break;
     case '-':
-      correctAnswer = (firstNumber - secondNumber).toString();
+      correctAnswer = (number1 - number2).toString();
       break;
     case '*':
-      correctAnswer = (firstNumber * secondNumber).toString();
+      correctAnswer = (number1 * number2).toString();
       break;
     default:
       break;
@@ -28,7 +29,7 @@ const taskAndAnswer = () => {
 };
 
 const gameCalc = () => {
-  playGame(rule, taskAndAnswer);
+  playGame(rule, createRound);
 };
 
 export default gameCalc;

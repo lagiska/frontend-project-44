@@ -15,16 +15,16 @@ const getGCD = (num1, num2) => {
   return gcd;
 };
 
-const taskAndAnswer = () => {
-  const num1 = getRandomNumber(1);
-  const num2 = getRandomNumber(1);
+const createRound = () => {
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
   const task = `${num1} ${num2}`;
   const correctAnswer = getGCD(num1, num2);
   return [task, String(correctAnswer)];
 };
 
-const playGCD = () => {
-  playGame(rule, taskAndAnswer);
+const playGcd = () => {
+  playGame(rule, createRound);
 };
 
-export default playGCD;
+export default playGcd;
