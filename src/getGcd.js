@@ -1,4 +1,4 @@
-const getGCD = (num1, num2) => {
+const getGcd = (num1, num2) => {
   const minNum = num1 > num2 ? num2 : num1;
   let gcd = 1;
   for (let i = 2; i <= minNum; i += 1) {
@@ -9,4 +9,4 @@ const getGCD = (num1, num2) => {
   return gcd;
 };
 
-export default getGCD;
+export default getGcd;
