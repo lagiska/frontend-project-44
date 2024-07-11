@@ -4,9 +4,10 @@ import getRandomNumber from '../getRandomNumber.js';
 
 const rule = 'What number is missing in the progression?';
 
+const progressionLength = 10;
+const maxDiffInProgression = 10;
+
 const createRound = () => {
-  const progressionLength = 10;
-  const maxDiffInProgression = 10;
   const firstNum = getRandomNumber(1, 100);
   const diffInProgression = getRandomNumber(1, maxDiffInProgression);
   const skip = getRandomNumber(0, progressionLength - 1);
