@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import playGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
-import isEven from '../isEven.js'
+import isEven from '../isEven.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 

@@ -1,14 +1,19 @@
 const calculate = (num1, num2, operator) => {
+  let answer;
   switch (operator) {
     case '+':
-      return num1 + num2;
+      answer = num1 + num2;
+      break;
     case '-':
-      return num1 - num2;
+      answer = num1 - num2;
+      break;
     case '*':
-      return num1 * num2;
+      answer = num1 * num2;
+      break;
     default:
       break;
   }
+  return answer;
 };
 
 export default calculate;
