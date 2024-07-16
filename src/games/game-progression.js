@@ -13,7 +13,7 @@ const createRound = () => {
   const skip = getRandomNumber(0, PROGRESSION_LENGTH);
   const progression = [];
 
-  for (let i = 0; i < progressionLength; i += 1) {
+  for (let i = 0; i < PROGRESSION_LENGTH; i += 1) {
     progression.push(firstNum + step * i);
   }
 
