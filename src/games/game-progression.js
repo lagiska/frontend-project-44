@@ -4,17 +4,17 @@ import getRandomNumber from '../getRandomNumber.js';
 
 const rule = 'What number is missing in the progression?';
 
-const progressionLength = 10;
-const maxDiffInProgression = 10;
+const PROGRESSION_LENGTH = 10;
+const MAX_STEP = 10;
 
 const createRound = () => {
   const firstNum = getRandomNumber(1, 100);
-  const diffInProgression = getRandomNumber(1, maxDiffInProgression);
-  const skip = getRandomNumber(0, progressionLength);
+  const step = getRandomNumber(1, MAX_STEP);
+  const skip = getRandomNumber(0, PROGRESSION_LENGTH);
   const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    progression.push(firstNum + diffInProgression * i);
+    progression.push(firstNum + step * i);
   }
 
   const correctAnswer = progression[skip];
