@@ -46,7 +46,7 @@ __"Игры разума"__ : это проект состоящий из 5 ко
 
 #### Демонстрация игры "Прогрессия":
 
-[![asciicast](https://asciinema.org/a/IFXyz2vVJmMwLdr6I3mCrb5SJ.svg)](https://asciinema.org/a/IFXyz2vVJmMwLdr6I3mCrb5SJ)
+[![asciicast](https://asciinema.org/a/gZF3i5iNpWvZbLSVJ4b55ojmH.svg)](https://asciinema.org/a/gZF3i5iNpWvZbLSVJ4b55ojmH)
 
 ## Игра "Простое ли число?"
 Запуск игры: `brain-prime`
