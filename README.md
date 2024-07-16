@@ -40,7 +40,7 @@ __"Игры разума"__ : это проект состоящий из 5 ко
 [![asciicast](https://asciinema.org/a/hjzbs69SH8yg9T2d1XtEXMcnx.svg)](https://asciinema.org/a/hjzbs69SH8yg9T2d1XtEXMcnx)
 
 ## Игра "Прогрессия"
-Запуск игры: `brain-progression`
+Запуск игры: `brain-progression`.
 
 Необходимо определить какого числа не хватает в прогрессии.
 
@@ -49,7 +49,7 @@ __"Игры разума"__ : это проект состоящий из 5 ко
 [![asciicast](https://asciinema.org/a/gZF3i5iNpWvZbLSVJ4b55ojmH.svg)](https://asciinema.org/a/gZF3i5iNpWvZbLSVJ4b55ojmH)
 
 ## Игра "Простое ли число?"
-Запуск игры: `brain-prime`
+Запуск игры: `brain-prime`.
 
 Необходимо определить простое ли число. Ответьте «yes», если число простое, иначе ответьте «no».
 
