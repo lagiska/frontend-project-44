@@ -8,7 +8,9 @@ const isEven = (num) => num % 2 === 0;
 
 const createRound = () => {
   const task = getRandomNumber(1, 100);
+
   const correctAnswer = isEven(task) ? 'yes' : 'no';
+
   return [task, correctAnswer];
 };
 

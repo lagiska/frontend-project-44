@@ -19,6 +19,7 @@ const createRound = () => {
 
   const correctAnswer = progression[skip];
   progression[skip] = '..';
+
   const task = progression.join(' ');
 
   return [task, String(correctAnswer)];
