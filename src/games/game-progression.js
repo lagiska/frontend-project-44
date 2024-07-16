@@ -10,7 +10,7 @@ const maxDiffInProgression = 10;
 const createRound = () => {
   const firstNum = getRandomNumber(1, 100);
   const diffInProgression = getRandomNumber(1, maxDiffInProgression);
-  const skip = getRandomNumber(0, progressionLength - 1);
+  const skip = getRandomNumber(0, progressionLength);
   const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
