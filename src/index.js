@@ -12,14 +12,14 @@ const playGame = (rule, createRound) => {
   let correctAnswersCount = 0;
 
   while (correctAnswersCount < ROUNDS_COUNT) {
-    const [task, correctAnswer] = createRound();
+    const [task, answer] = createRound();
     console.log(`Question: ${task}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === correctAnswer) {
+    if (userAnswer === answer) {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was "${answer}".`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }

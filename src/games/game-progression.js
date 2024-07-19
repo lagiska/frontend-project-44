@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import playGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
@@ -17,12 +16,12 @@ const createRound = () => {
     progression.push(firstNum + step * i);
   }
 
-  const correctAnswer = progression[skip];
+  const answer = progression[skip];
   progression[skip] = '..';
 
   const task = progression.join(' ');
 
-  return [task, String(correctAnswer)];
+  return [task, String(answer)];
 };
 
 const playProgression = () => {

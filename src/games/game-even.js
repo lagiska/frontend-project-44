@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import playGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
@@ -9,9 +8,9 @@ const isEven = (num) => num % 2 === 0;
 const createRound = () => {
   const task = getRandomNumber(1, 100);
 
-  const correctAnswer = isEven(task) ? 'yes' : 'no';
+  const answer = isEven(task) ? 'yes' : 'no';
 
-  return [task, correctAnswer];
+  return [task, answer];
 };
 
 const gameEven = () => {

@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import playGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
@@ -19,9 +18,9 @@ const isPrime = (num) => {
 const createRound = () => {
   const task = getRandomNumber(1, 100);
 
-  const correctAnswer = isPrime(task) ? 'yes' : 'no';
+  const answer = isPrime(task) ? 'yes' : 'no';
 
-  return [task, correctAnswer];
+  return [task, answer];
 };
 
 const playPrime = () => {
