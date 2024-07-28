@@ -13,28 +13,27 @@ const multiply = (num1, num2) => num1 * num2;
 
 const createRound = () => {
   const number1 = getRandomNumber(1, 100);
+
   const number2 = getRandomNumber(1, 100);
+
   const operator = OPERATORS[getRandomNumber(0, 3)];
 
   const task = `${number1} ${operator} ${number2}`;
 
-  let answer;
+  const answer = (operator) => {
+    switch (operator) {
+      case '+':
+        return add(number1, number2);
+      case '-':
+        return substract(number1, number2);
+      case '*':
+        return multiply(number1, number2);
+      default:
+        break;
+    }
+};
 
-  switch (operator) {
-    case '+':
-      answer = add(number1, number2);
-      break;
-    case '-':
-      answer = substract(number1, number2);
-      break;
-    case '*':
-      answer = multiply(number1, number2);
-      break;
-    default:
-      break;
-  }
-
-  return [task, String(answer)];
+  return [task, String(answer(operator))];
 };
 
 const gameCalc = () => {

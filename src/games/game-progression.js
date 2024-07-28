@@ -8,16 +8,20 @@ const MAX_STEP = 10;
 
 const createRound = () => {
   const firstNum = getRandomNumber(1, 100);
+
   const step = getRandomNumber(1, MAX_STEP);
-  const skip = getRandomNumber(0, PROGRESSION_LENGTH);
+
+  const gap = getRandomNumber(0, PROGRESSION_LENGTH);
+
   const progression = [];
 
   for (let i = 0; i < PROGRESSION_LENGTH; i += 1) {
     progression.push(firstNum + step * i);
   }
 
-  const answer = progression[skip];
-  progression[skip] = '..';
+  const answer = progression[gap];
+
+  progression[gap] = '..';
 
   const task = progression.join(' ');
 

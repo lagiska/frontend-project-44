@@ -18,6 +18,7 @@ const getGcd = (num1, num2) => {
 
 const createRound = () => {
   const number1 = getRandomNumber(1, 100);
+
   const number2 = getRandomNumber(1, 100);
 
   const task = `${number1} ${number2}`;
