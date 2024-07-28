@@ -20,20 +20,19 @@ const createRound = () => {
 
   const task = `${number1} ${operator} ${number2}`;
 
-  const answer = (operator) => {
+  function answer() {
     switch (operator) {
-      case '+':
-        return add(number1, number2);
-      case '-':
-        return substract(number1, number2);
-      case '*':
-        return multiply(number1, number2);
-      default:
-        break;
-    }
-};
+      case '+': return add(number1, number2);
 
-  return [task, String(answer(operator))];
+      case '-': return substract(number1, number2);
+
+      case '*': return multiply(number1, number2);
+
+      default: return undefined;
+    }
+  }
+
+  return [task, String(answer())];
 };
 
 const gameCalc = () => {
