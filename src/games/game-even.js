@@ -1,7 +1,7 @@
 import playGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
-const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+const RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
@@ -14,7 +14,7 @@ const createRound = () => {
 };
 
 const gameEven = () => {
-  playGame(rule, createRound);
+  playGame(RULE, createRound);
 };
 
 export default gameEven;
