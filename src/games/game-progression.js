@@ -14,7 +14,7 @@ const getProgression = (progLen = PROGRESSION_LENGTH, maxStep = MAX_STEP) => {
   // путаницы с переменной progression в следующем блоке
 
   for (let i = 0; i < progLen; i += 1) {
-    tempArray.push(firstNum + step * i);
+    array.push(firstNum + step * i);
   }
 
   return array;
