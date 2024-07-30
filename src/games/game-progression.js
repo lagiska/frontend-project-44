@@ -9,15 +9,13 @@ const MAX_STEP = 10;
 const getProgression = (progLen = PROGRESSION_LENGTH, maxStep = MAX_STEP) => {
   const firstNum = getRandomNumber(1, 100);
   const step = getRandomNumber(1, maxStep);
-  const array = [];
-  // оставила имя переменной как "array", чтобы избежать
-  // путаницы с переменной progression в следующем блоке
+  const progression = [];
 
   for (let i = 0; i < progLen; i += 1) {
-    array.push(firstNum + step * i);
+    progression.push(firstNum + step * i);
   }
 
-  return array;
+  return progression;
 };
 
 const createRound = () => {
